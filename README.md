@@ -19,3 +19,14 @@ enfim as possibilidades são muitas o que faltava era um codigo aberto para exem
 ahhhh pode ser customizado para outros idiomas tambem não só portugues do Brasil
 
 espero contar com a ajuda de vocês grato e bom final de semana
+
+#Torresminhos #shellScript #Python #IA #AIML #OO #Assistente #Cortana #Siri #Acessibilidade #ProblemasMotores #InterfaceDeVoz #ComandoPorVoz #voz #ReconhecimentoDeVoz #Brasil #Brazil
+
+#BaconFit on GitHub
+#OpenSource #GPL3
+
+#DioLinux #VivaOLinux #Linux #Ubuntu #Debian
+#HackADay #Geek
+
+Contrata nois #Torvald kkkkkkkkkkkk
+olha nois #Canonical kkkkkkk
