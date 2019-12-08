@@ -30,3 +30,18 @@ espero contar com a ajuda de vocês grato e bom final de semana
 
 Contrata nois #Torvald kkkkkkkkkkkk
 olha nois #Canonical kkkkkkk
+
+
+para instalar rode o comando
+# sudo dpkg -i sexta.deb
+
+e para usar basta chamar sexta no terminal
+
+os outros comandos tambem da para chamar so pelo nome
+recomendo entra na paata /etc/sexta e verificar os comando disponiveis
+
+outra coisa é a sexta somente modo texto e a saida em voz 
+é um script python renomeado para sexta2.py se trocar a sexta.py por essa mudando
+apenas o nome o modo teclado é ativado
+
+Obrigado atenciosamente Diego Casagranda V. Santos <Bacon Fit>
