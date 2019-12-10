@@ -1,0 +1,21 @@
+#!/bin/bash
+
+txtMensagem="Sua velocidade atual é de: "
+
+echo $txtMensagem
+
+python /etc/sexta/speedtest.py | grep Mbit/s | tr -d '""'
+txtVel=`python /etc/sexta/speedtest.py | grep Mbit/s | tr -d '""'`
+
+espeak -s 145 -v pt+f5 $txtMensagem $txtVel
+
+
+
+
+
+
+
+
+
+
+

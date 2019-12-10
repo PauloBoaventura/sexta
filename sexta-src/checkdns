@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function VerificaDNS() {
+
+DNS_ATUAL=$(echo $(nmcli dev show | grep DNS | awk '{print $2}'))
+DNS_ANTIGO="208.67.222.222 208.67.220.220"
+
+#echo $DNS_ATUAL
+#echo $DNS_ANTIGO
+
+if [ "$DNS_ATUAL" == "$DNS_ANTIGO" ];
+then
+	echo "o DNS está ok!"
+else
+	echo "Erro no DNS por favor verifique!"
+fi
+
+}
+
+VerificaDNS
+
+#printf '%s\n' $DNS_ATUAL

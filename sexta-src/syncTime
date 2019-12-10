@@ -1,0 +1,6 @@
+#!/bin/bash
+
+[ "$UID" -eq 0 ] || { echo "Execcute como root sua ANTA!."; exit 1;}
+
+sudo ntpdate -s time.nist.gov
+sudo hwclock -w

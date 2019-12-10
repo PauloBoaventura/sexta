@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DISCO_ATUAL=`df -h . | tail -n1 | awk '{print $1}'`
+
+TAMANHO=`df -h | grep $DISCO_ATUAL | awk '{print $2}'`
+USADO=`df -h | grep $DISCO_ATUAL | awk '{print $3}'`
+LIVRE=`df -h | grep $DISCO_ATUAL | awk '{print $4}'`
+PORCENTAGEM=`df -h | grep $DISCO_ATUAL | awk '{print $5}'`
+
+echo "HD atual de: $TAMANHO, utilizado: $USADO, Espaço Livre: $LIVRE"

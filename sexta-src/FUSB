@@ -1,0 +1,46 @@
+#!/bin/bash
+
+[ "$UID" -eq 0 ] || { echo "Execcute como root."; exit 1;}
+
+REMOVE() {
+	sudo udisksctl unmount -b /dev/${UNIDADE}
+	sudo udisksctl power-off -b /dev/${UNIDADE}
+	echo "Remova o pendrive!"
+}
+
+DESMONTAR() {
+
+	sudo umount /dev/${UNIDADE}1
+	sudo umount /dev/${UNIDADE}2
+	sudo umount /dev/${UNIDADE}3
+
+}
+
+lsblk -d | egrep -v "sda|sr0" | egrep -v "loop|sr0" | awk '{print $1 "\t" $4}'
+
+read -p "Entre com o nome da unidade: " UNIDADE
+
+DESMONTAR
+
+sudo dd if=/dev/zero of=/dev/${UNIDADE} bs=512 count=1 conv=notrunc status=progress
+wipefs -a /dev/${UNIDADE}
+
+sudo install-mbr --force /dev/${UNIDADE}
+
+printf "o\nn\np\n\n\n\na\nw" | sudo fdisk /dev/${UNIDADE}
+printf "y" | sudo mkfs.ext4 /dev/${UNIDADE}1
+
+DESMONTAR
+sudo tune2fs -o acl /dev/${UNIDADE}1
+sudo mount /dev/${UNIDADE}1 /mnt
+sudo chown root: /mnt
+chmod 777 /mnt
+setfacl -m d:u::rwx,d:g::rwx,d:o::rwx /mnt
+
+DESMONTAR
+
+sudo e2label /dev/${UNIDADE}1 usb-pen
+
+REMOVE
+
+

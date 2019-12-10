@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<aiml version="1.0">
+
+
+<category>
+    <pattern>Quanto é *</pattern>
+    <template>
+	É igual a: <system>Matematica <star/></system>
+    </template>
+</category>
+
+<category>
+    <pattern>QUAL A RAIZ QUADRADA DE *</pattern>
+    <template>
+	É igual a: <system>RaizQuadrada <star/></system>
+    </template>
+</category>
+
+</aiml>

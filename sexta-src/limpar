@@ -1,0 +1,14 @@
+#!/bin/bash
+
+[ "$UID" -eq 0 ] || { echo "Execcute como root."; exit 1;}
+
+sudo sync; echo 1 > /proc/sys/vm/drop_caches
+sudo sync; echo 2 > /proc/sys/vm/drop_caches
+sudo sync; echo 3 > /proc/sys/vm/drop_caches
+
+sudo swapoff -a && swapon -a
+
+sudo rm -rf ~/.local/share/Trash/*
+sudo rm -rvf /var/cache/apt/archives/*.deb
+
+

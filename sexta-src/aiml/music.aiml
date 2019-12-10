@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<aiml version="1.0">
+
+    <category>
+        <pattern>TOCAR PLAYLIST ROCK</pattern>
+        <template>
+             <random>
+               <li>Tocando Música no Spotify!</li>
+            </random>
+            <system> bash -c "firefox "https://open.spotify.com/playlist/6Bo4kpqSVPUfkrLaswGcOZ" &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOCAR PLAYLIST ROCK ANOS 60</pattern>
+        <template>
+             <random>
+               <li>Tocando Música no Spotify!</li>
+            </random>
+            <system> bash -c "firefox "https://open.spotify.com/playlist/37i9dQZF1DX2e5iuTsMOoD" &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLAY MÚSICA</pattern>
+        <template>
+             <random>
+               <li>Ok!</li>
+               <li>Tocando Música!</li>
+            </random>
+	    <system> bash -c "qmmp --play &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ESCUTAR MÚSICA</pattern>
+        <template>
+             <random>
+               <li>Ok!</li>
+               <li>Tocando Música!</li>
+            </random>
+	    <system> bash -c "qmmp --play &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PAUSAR MÚSICA</pattern>
+        <template>
+             <random>
+               <li>Música parada!</li>
+            </random>
+	    <system> bash -c "qmmp --pause &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PRÓXIMA Música</pattern>
+        <template>
+             <random>
+               <li>Tocando a próxima Música!</li>
+            </random>
+	       <system> bash -c "qmmp --next &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>MÚSICA ANTERIOR</pattern>
+        <template>
+             <random>
+               <li>Tocando a Música anterior!</li>
+            </random>
+	    <system> bash -c "qmmp --previous &amp;> /dev/null &amp;" </system>	
+        </template>
+    </category>
+
+</aiml>

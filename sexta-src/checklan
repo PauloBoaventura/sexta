@@ -1,0 +1,22 @@
+#!/bin/bash
+
+readonly FILE_CONF="/etc/sexta/default.conf"
+
+if [ -f "$FILE_CONF" ]
+then
+  SERVER=$(cat "${FILE_CONF}" | grep "server=" | cut -d'=' -f2)
+  IMP=$(cat "${FILE_CONF}" | grep "impressora=" | cut -d'=' -f2)
+  MODEN=$(cat "${FILE_CONF}" | grep "moden=" | cut -d'=' -f2)
+  REPETIDOR=$(cat "${FILE_CONF}" | grep "repetidor=" | cut -d'=' -f2)
+else
+	echo "Não foi encontrado o arquivo de confifuração $FILE_CONF"
+fi
+
+server=`pinga $SERVER`
+impressora=`pinga $IMP`
+moden=`pinga $MODEN`
+repetidor=`pinga $REPETIDOR`
+
+echo "a Impressora está $impressora"
+echo "o Moden está $moden"
+echo "o Repetidor está $repetidor"

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<aiml version="1.0">
+
+    <category>
+        <pattern>ABRIR ARQUIVOS</pattern>
+         <template>
+             <random>
+               <li>OK!</li>
+            </random>
+            <system>thunar</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ABRIR ARQUIVOS</pattern>
+         <template>
+            <srai>ABRIR ARQUIVOS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>FECHAR ARQUIVOS</pattern>
+         <template>
+             <random>
+               <li>ok! fechando arquivos!</li>
+            </random>
+            <system>thunar -q</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FECHAR ARQUIVOS</pattern>
+         <template>
+            <srai>FECHAR ARQUIVOS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>MEUS ARQUIVOS</pattern>
+         <template>
+             <random>
+               <li>ok! abrindo meus arquivos</li>
+            </random>
+            <system>thunar ~</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR DIRETORIO *</pattern>
+         <template>
+            <random>
+               <li>ok! abrindo diretorio<star/></li>
+            </random>
+            <system>thunar <star/></system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR ARQUIVO *</pattern>
+         <template>
+            <random>
+               <li>ok! abrindo diretorio<star/></li>
+            </random>
+            <system>thunar <star/></system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR QMMP</pattern>
+        <template>
+             <random>
+               <li>Ok! abrindo qmmp</li>
+            </random>
+            <system> bash -c "qmmp &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR TERMINAL</pattern>
+        <template>
+             <random>
+               <li>Ok! Abrindo Terminal!</li>
+            </random>
+            <system> bash -c "exo-open --launch TerminalEmulator &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ABRIR QMMP *</pattern>
+        <template>
+             <srai>ABRIR QMMP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRI QMMP *</pattern>
+        <template>
+             <srai>ABRIR QMMP</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* ABRIR QMMP</pattern>
+        <template>
+             <srai>ABRIR QMMP</srai>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>ABRIR CALCULADORA</pattern>
+        <template>
+             <random>
+               <li>Ok! abrindo Calculadora</li>
+            </random>
+            <system> bash -c "mate-calc &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ABRIR CALCULADORA *</pattern>
+        <template>
+             <srai>ABRIR CALCULADORA</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR CALCULADORA *</pattern>
+        <template>
+             <srai>ABRIR CALCULADORA</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* ABRIR CALCULADORA</pattern>
+        <template>
+             <srai>ABRIR CALCULADORA</srai>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>ABRIR VLC</pattern>
+        <template>
+             <random>
+               <li>Ok! abrindo VLC</li>
+            </random>
+            <system> bash -c "vlc &amp;> /dev/null &amp;"</system>
+        </template>
+        
+    </category>
+
+    <category>
+        <pattern>* ABRIR VLC *</pattern>
+        <template>
+             <srai>ABRIR VLC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR VLC *</pattern>
+        <template>
+             <srai>ABRIR VLC</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* ABRIR VLC</pattern>
+        <template>
+             <srai>ABRIR VLC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR FIREFOX</pattern>
+        <template>
+             <random>
+               <li>ok! abrindo FireFox</li>
+            </random>
+            <system> bash -c "firefox &amp;> /dev/null &amp;"</system>
+        </template>
+        
+    </category>
+
+    <category>
+        <pattern>* ABRIR NAVEGADOR *</pattern>
+        <template>
+             <srai>ABRIR FIREFOX</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>* ABRIR FIREFOX *</pattern>
+        <template>
+             <srai>ABRIR FIREFOX</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR FIREFOX *</pattern>
+        <template>
+             <srai>ABRIR FIREFOX</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* ABRIR FIREFOX</pattern>
+        <template>
+             <srai>ABRIR FIREFOX</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR NAVEGADOR</pattern>
+        <template>
+             <srai>ABRIR FIREFOX</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ABRIR NAVEGADOR *</pattern>
+        <template>
+             <srai>ABRIR FIREFOX</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR NAVEGADOR *</pattern>
+        <template>
+             <srai>ABRIR FIREFOX</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* ABRIR NAVEGADOR</pattern>
+        <template>
+             <srai>ABRIR FIREFOX</srai>
+        </template>
+    </category>
+
+</aiml>

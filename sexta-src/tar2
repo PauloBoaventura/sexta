@@ -1,0 +1,12 @@
+#!/bin/bash
+
+ARQ=$1
+read -p "Entre com o nome do Arquivo: " ARQUIVO
+
+function tar2 {
+
+	tar -czvf $ARQUIVO.tar.gz $ARQ
+
+}
+
+tar2

@@ -1,0 +1,73 @@
+#!/bin/sh
+
+a=$1
+b=$2
+c=$3
+
+x1=$(echo "scale=2; ((-1*$b) + (sqrt(($b*$b)-(4*$a*$c))))/(2*$a)" | bc 2> /dev/null)
+x2=$(echo "scale=2; ((-1*$b) - (sqrt(($b*$b)-(4*$a*$c))))/(2*$a)" | bc 2> /dev/null)
+
+echo "x é igual a x1:$x1 e x2 igual a: $x2"
+
+
+#if ($x1 == $null &&  $x2 == $null); then
+#	echo "Valor de x não satisfeito!"
+#else
+#	
+#fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#echo "$a" "$b" "$c"
+
+case "$b" in
+	+)
+	    num1=$a
+	    num2=$c
+	    result=`expr $num1 + $num2`
+	    echo $result
+	    break
+	;;
+	-)
+	    num1=$a
+	    num2=$c
+	    result=`expr $num1 - $num2`
+	    echo $result
+	    break
+	;;
+	x)
+	    num1=$a
+	    num2=$c
+	    result=$(expr "scale=2; $num1 * $num2" | bc)
+	    echo $result
+	    break
+	;;
+	/)
+	    num1=$a
+	    num2=$c
+	    result=$(expr "scale=2; $num1/$num2" | bc)
+	    echo $result
+	    break
+	;;
+	*)
+	    break
+	;;
+esac

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+[ "$UID" -eq 0 ] || { echo "Execcute como root."; exit 1;}
+
+read -p "Entre com o nome da Unidade: " UNIDADE
+read -p "Entre com o nome da Sistema de Arquivos: " SYSARQ
+read -p "Entre com o nome da Imagem: " IMAGEM
+
+sudo partclone.$SYSARQ -c -d -s /dev/$UNIDADE -o $IMAGEM
+
+sudo tar czf $(date +%Y%m%d-%H%M%S).tar.gz $IMAGEM
+
+sudo rm -rf $IMAGEM
+

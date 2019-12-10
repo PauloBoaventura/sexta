@@ -1,0 +1,20 @@
+#!/bin/bash
+
+URL=$1
+
+# function: guide
+guide () {
+  echo "Youtube URL is required."
+}
+
+# function: download audio and convert to mp3
+download_and_convert() {
+  youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $URL
+}
+
+# check parameter
+if [ $# = 0 ]; then
+  guide
+else
+  download_and_convert
+fi

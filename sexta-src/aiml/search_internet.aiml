@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<aiml version="1.0">
+	
+    <category>
+        <pattern>ABRIR GOOGLE</pattern>
+        <template>
+             <random>
+               <li>ok! abrindo Google</li>
+            </random>
+            <system> bash -c "firefox "http://www.google.com" &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>GOOGLE *</pattern>
+        <template>
+             <random>
+              <li>ok! pesquisando sobre <star/> no google </li>
+            </random>
+            <system> bash -c "firefox 'http://www.google.com/search?q=<star/>' &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESQUISAR *</pattern>
+        <template>
+             <srai>GOOGLE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESQUISE *</pattern>
+        <template>
+             <srai>GOOGLE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESQUISAR POR * NO GOOGLE</pattern>
+        <template>
+             <srai>GOOGLE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESQUISE NO GOOGLE SOBRE *</pattern>
+        <template>
+             <srai>GOOGLE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESQUISAR NO GOOGLE SOBRE *</pattern>
+        <template>
+             <srai>GOOGLE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ABRIR YOUTUBE</pattern>
+        <template>
+             <random>
+               <li>ok! abrindo YouTube </li>
+            </random>
+            <system> bash -c "firefox "http://www.youtube.com" &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YOUTUBE *</pattern>
+        <template>
+             <random>
+               <li>ok! pesquisando sobre <star/> no YouTube </li>
+            </random>
+            <system> bash -c "firefox 'https://www.youtube.com/results?search_query=<star/>' &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESQUISAR POR * NO YOUTUBE</pattern>
+        <template>
+             <srai>YOUTUBE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESQUISAR NO YOUTUBE *</pattern>
+        <template>
+             <srai>YOUTUBE <star/></srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>PESQUISAR NO YOUTUBE SOBRE *</pattern>
+        <template>
+             <srai>YOUTUBE <star/></srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>PESQUISE NO YOUTUBE SOBRE *</pattern>
+        <template>
+             <srai>YOUTUBE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>GOOGLE MAPAS *</pattern>
+        <template>
+             <random>
+               <li>ok pesquisando no Google Mapas sobre <star/></li>
+            </random>
+            <system> bash -c "firefox "https://www.google.co.in/maps/search/<star/>" &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>MAPA PARA *</pattern>
+        <template>
+             <random>
+               <li>ok pesquisando no Google Mapas sobre <star/></li>
+            </random>
+            <system> bash -c "firefox "https://www.google.co.in/maps/search/<star/>" &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESQUISAR SOBRE * NO GOOGLE MAPAS</pattern>
+        <template>
+             <srai>GOOGLE MAPAS <star/></srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>PESQUISAR NO GOOGLE MAPAS SOBRE *</pattern>
+        <template>
+             <srai>GOOGLE MAPAS <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ESCUTAR MUSICA *</pattern>
+        <template>
+             <random>
+               <li>ok! escutar musica <star/></li>
+            </random>
+            <system> bash -c "firefox '<system> python /etc/sexta/youtube.py '<star/>'</system>' &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOCAR MUSICA *</pattern>
+        <template>
+             <random>
+               <li>ok! tocando musica <star/></li>
+            </random>
+            <system> bash -c "firefox '<system> python /etc/sexta/youtube.py '<star/>'</system>' &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+</aiml>

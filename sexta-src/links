@@ -1,0 +1,7 @@
+#!/bin/bash
+
+[ "$UID" -eq 0 ] || { echo "Execcute como root."; exit 1;}
+
+read -p "Entre com o nome do Script: " SCRIPT
+
+sudo ln /etc/sexta/${SCRIPT} /usr/bin/${SCRIPT}

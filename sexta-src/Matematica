@@ -1,0 +1,41 @@
+#!/bin/sh
+
+a=$1
+b="$2"
+c=$3
+
+#echo "$a" "$b" "$c"
+
+case "$b" in
+	+)
+	    num1=$a
+	    num2=$c
+	    result=`expr $num1 + $num2`
+	    echo $result
+	    break
+	;;
+	-)
+	    num1=$a
+	    num2=$c
+	    result=`expr $num1 - $num2`
+	    echo $result
+	    break
+	;;
+	x)
+	    num1=$a
+	    num2=$c
+	    result=$(expr "scale=2; $num1 * $num2" | bc)
+	    echo $result
+	    break
+	;;
+	/)
+	    num1=$a
+	    num2=$c
+	    result=$(expr "scale=2; $num1/$num2" | bc)
+	    echo $result
+	    break
+	;;
+	*)
+	    break
+	;;
+esac

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+​NOW=`date +"%m-%d-%Y%T"`
+​SNAPSHOT_NAME="Urban"
+​SNAPSHOT_DESCRIPTION="Snapshot taken on $NOW"
+
+VBoxManage snapshot Urban_Ubuntu take "$SNAPSHOT_NAME" --description "$SNAPSHOT_DESCRIPTION"

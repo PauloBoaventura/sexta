@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0" encoding ="UTF-8">
+
+    <category>
+        <pattern>SEXTA-FEIRA</pattern>
+        <template>
+             <random>
+                <li>Bom te ver novamente!</li> 
+                <li>O que você gostaria que eu fizesse?</li> 
+                <li>O que temos para hoje?</li> 
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>BOM DIA</pattern>
+        <template>
+             <random>
+                <li>Bom te ver novamente!</li> 
+                <li>O que você gostaria que eu fizesse?</li> 
+                <li>O que temos para hoje?</li> 
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>REPITA COMIGO *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>REPITA *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+   <category>
+        <pattern>REPITA DEPOIS DE MIM *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>FALE *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>O QUE É VOCÊ SEXTA-FEIRA</pattern>
+        <template>
+            Eu sou a Sexta-Feira
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM CRIOU VOCÊ</pattern>
+        <template>
+            Major Tom me criou!
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM FEZ VOCÊ</pattern>
+        <template>
+            Major Tom me fez!
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM CRIOU SEXTA FEIRA</pattern>
+        <template>
+            Major Tom me criou!
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM CRIOU SEXTA-FEIRA</pattern>
+        <template>
+            Major Tom me criou!
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM É O SEU CRIADOR</pattern>
+        <template>
+            Major Tom me criou!
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM É MAJOR TOM</pattern>
+        <template>
+            Major Tom é meu Pai!
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM É TOM</pattern>
+        <template>
+            Major Tom.
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM É O TEU PAI</pattern>
+        <template>
+            Major Tom é meu Pai!
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM É SUA MÃE</pattern>
+        <template>
+            É um segredo. Pergunte ao meu pai.
+        </template>
+    </category>
+
+    <category>
+        <pattern>O QUE SIGNIFICA SEXTA-FEIRA</pattern>
+        <template>
+             apenas um sistema muito inteligente
+        </template>
+    </category>
+
+    <category>
+        <pattern>O QUE SIGNIFICA SEXTA FEIRA</pattern>
+        <template>
+             apenas um sistema muito inteligente
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUE HORAS SÃO</pattern>
+        <template>
+            Agora é <system>date "+%l %M %P"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUAL É A HORA</pattern>
+        <template>
+            <srai>QUE HORAS SÃO</srai>
+        </template>
+    </category>
+
+    <category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+           <li>Desculpe, eu não entendi muito bem</li>
+           <li>Eu não entendo isso ainda. Talvez você possa me ensinar.</li>
+           <li>Eu não sei como responder isso. Talvez eu possa te interessar em outra coisa.</li>
+        </random>
+    </template>
+    </category>
+    
+    <category>
+        <pattern>O QUE *</pattern>
+        <template>
+            Você quer que eu pesquise isso por você?
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUANDO *</pattern>
+        <template>
+            Você quer que eu pesquise isso por você?
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>QUEM *</pattern>
+        <template>
+            Você quer que eu pesquise isso por você?
+        </template>
+    </category>
+
+    <category>
+        <pattern>ONDE *</pattern>
+        <template>
+            Você quer que eu pesquise isso por você?
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUAL *</pattern>
+        <template>
+            Você quer que eu pesquise isso por você?
+        </template>
+    </category>
+
+    <category>
+        <pattern>PORQUE *</pattern>
+        <template>
+            Você quer que eu pesquise isso por você?
+        </template>
+    </category>
+
+    <category>
+        <pattern>STATUS DO SISTEMA</pattern>
+        <template>
+            Todos os sistemas estão ok. Bateria <system>upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "percentage"</system>. Battery <system>upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state"</system>. <system>ps -ef -C command_name --no-headers | wc -l</system>
+            processes are currently running. <system>python volume.py g</system>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* STATUS DO SISTEMA *</pattern>
+        <template>
+            <srai>STATUS DO SISTEMA</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* STATUS DO SISTEMA</pattern>
+        <template>
+            <srai>STATUS DO SISTEMA</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>STATUS DO SISTEMA *</pattern>
+        <template>
+            <srai>STATUS DO SISTEMA</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* RELATÓRIO DO SISTEMA *</pattern>
+        <template>
+            <srai>STATUS DO SISTEMA</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* RELATÓRIO DO SISTEMA</pattern>
+        <template>
+            <srai>STATUS DO SISTEMA</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>RELATÓRIO DO SISTEMA *</pattern>
+        <template>
+            <srai>STATUS DO SISTEMA</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>COMO VOCÊ ESTÁ</pattern>
+        <template>
+            Estou bem <srai>STATUS DO SISTEMA</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SIM</pattern>
+        <that>VOCÊ QUER QUE EU PESQUISE ISSO POR VOCÊ</that>
+        <template>
+            <srai>GOOGLE <input index="2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOQUE ME UMA UMA MÚSICA</pattern>
+        <template>
+            qual a música?
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOQUE UMA MÚSICA</pattern>
+        <template>
+            Qual á música?
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOCAR UMA MÚSICA</pattern>
+        <template>
+            Qual á música?
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOCAR MÚSICA</pattern>
+        <template>
+            Qual á música?
+        </template>
+    </category>
+
+     <category>
+        <pattern>*</pattern>
+        <that>QUAL Á MÚSICA</that>
+        <template>
+            <system> bash -c "firefox 'https://www.youtube.com/results?search_query=<star/>' &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+</aiml>
+</xml>

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+umount /dev/sdb1
+mount /dev/sdb1 /mnt
+
+CHROOT=/mnt
+
+echo "Mountando chroot..."
+
+sudo cp -Rf /etc/resolv.conf ${CHROOT}/etc/resolv.conf
+sudo cp -Rf /etc/locale.gen ${CHROOT}/etc/locale.gen
+sudo cp -Rf /etc/default/locale ${CHROOT}/etc/default/locale
+
+sudo mount --bind /dev ${CHROOT}/dev 
+sudo mount --bind /dev/pts ${CHROOT}/dev/pts 
+sudo mount --bind /proc ${CHROOT}/proc 
+sudo mount --bind /sys ${CHROOT}/sys
+
+echo "Jaula pronta!"
+sudo chroot ${CHROOT} /bin/bash
+echo "Saindo da Jaula!"
+
+echo "Desmontando chroot..."
+
+fuser  --verbose --kill ${CHROOT}
+umount --recursive ${CHROOT}
+
+echo "Finalizado!"

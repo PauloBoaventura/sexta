@@ -1,0 +1,12 @@
+#!/bin/bash
+
+[ "$UID" -eq 0 ] || { echo "Execcute como root."; exit 1;}
+
+read -p "Entre com o nome da Unidade: " UNIDADE
+read -p "Entre com o nome da Partição: " PARTICAO
+
+sudo mount -t ext4 /dev/${UNIDADE} /mnt
+sudo grub-install --root-directory=/mnt /dev/${PARTICAO}
+sudo Umount /dev/${UNIDADE}
+
+echo "Finalizado!"

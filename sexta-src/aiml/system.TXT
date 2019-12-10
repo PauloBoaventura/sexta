@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<aiml version="1.0">
+
+	<category>
+	    <pattern>HORA</pattern>
+	    <template>
+		A hora é <system>date "+%l:%M %P"</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>QUAL A HORA ATUAL</pattern>
+	    <template>
+		A hora é <system>date "+%l:%M %P"</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>OLÁ</pattern>
+	    <template>
+		<system>hello</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>OI</pattern>
+	    <template>
+		<system>hello</system>
+	    </template>
+	</category>
+
+
+	<category>
+	    <pattern>hd</pattern>
+	    <template>
+		<system>relatoriohd</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>COMO ESTÁ O HD</pattern>
+	    <template>
+		<system>relatoriohd</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>VERIFICAR O HD</pattern>
+	    <template>
+		<system>relatoriohd</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>PREVISÃO PARA HOJE</pattern>
+	    <template>
+		<system>prevtempo</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>PREVISÃO DO TEMPO PARA HOJE</pattern>
+	    <template>
+		<system>prevtempo</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>QUAL A PREVISÃO DO TEMPO PARA HOJE</pattern>
+	    <template>
+		<system>prevtempo</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>COMO ESTA O TEMPO</pattern>
+	    <template>
+		<system>prevtempo</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>VERIFIQUE O DNS</pattern>
+	    <template>
+		<system>checkdns</system>
+	    </template>
+	</category>
+veri
+	<category>
+	    <pattern>VERIFICAR O DNS</pattern>
+	    <template>
+		<system>checkdns</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>VERIFICAR DNS</pattern>
+	    <template>
+		<system>checkdns</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>VERIFICAR DNS</pattern>
+	    <template>
+		<system>checkdns</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>COMO ESTA O DNS</pattern>
+	    <template>
+		<system>checkdns</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>VERIFICAR A REDE</pattern>
+	    <template>
+		<system>scanrede</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>COMO ESTA A REDE</pattern>
+	    <template>
+		<system>scanrede</system>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>QUANTOS DISPOSITIVOS ESTÃO NA REDE</pattern>
+	    <template>
+		<system>scanrede</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>DISPOSITIVOS NA REDE</pattern>
+	    <template>
+		<system>scanrede</system>
+	    </template>
+	</category>
+
+	
+	<category>
+	    <pattern>VERIFICAR REDE</pattern>
+	    <template>
+		<system>scanrede</system>
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>VERIFICAR REDE</pattern>
+	    <template>
+		<system>scanrede</system>
+	    </template>
+	</category>
+
+
+	<category>
+	    <pattern>RELATÓRIO</pattern>
+	    <template>
+		<system>relatorio</system>
+	    </template>
+	</category>
+
+</aiml>

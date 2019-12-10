@@ -1,0 +1,38 @@
+#!/bin/bash
+
+readonly FILE_CONF="/etc/sexta/default.conf"
+
+saudacao=""
+
+DIA_SEMANA=$(date +%A)
+DIA=$(date +%d)
+MES=$(date +%B)
+ANO=$(date +%Y)
+
+if [ -f "$FILE_CONF" ]
+then
+  NICKNAME=$(cat "${FILE_CONF}" | grep "nickname=" | cut -d'=' -f2)
+  NAME_MACHINE=$(cat "${FILE_CONF}" | grep "name_machine=" | cut -d'=' -f2)
+else
+	echo "Não foi encontrado o arquivo de confifuração $FILE_CONF"
+fi
+
+function comando_saudacao() {
+
+	hour=$(date +"%H")
+
+	if [ $hour -ge 0 -a $hour -lt 12 ]
+	then
+	  saudacao="Bom dia $NICKNAME,  Hoje é $DIA_SEMANA, dia $DIA de $MES de $ANO." 
+	elif [ $hour -ge 12 -a $hour -lt 18 ]
+	then
+	  saudacao="Boa tarde $NICKNAME,  Hoje é $DIA_SEMANA, dia $DIA de $MES de $ANO."
+	else
+	  saudacao="Boa noite $NICKNAME,  Hoje é $DIA_SEMANA, dia $DIA de $MES de $ANO."
+	fi
+
+	echo $saudacao
+
+}
+
+comando_saudacao

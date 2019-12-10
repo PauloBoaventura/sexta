@@ -1,0 +1,7 @@
+#!/bin/sh
+
+a=$1
+num1=$a
+
+result=$(expr "sqrt($num1)" | bc)
+echo $result

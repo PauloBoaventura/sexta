@@ -1,0 +1,18 @@
+#!/bin/bash
+
+HOST=$1
+
+function pingcheck {
+
+	ping=`ping -c 1 $HOST | grep bytes | wc -l`
+
+	if [ "$ping" -gt 1 ]; then
+		echo "ok!"
+	else
+		echo "Desligado!"
+	fi
+
+}
+
+pingcheck
+

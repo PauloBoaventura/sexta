@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<aiml version="1.0">
+
+	<category>
+	    <pattern>DATA</pattern>
+	    <template>
+		A hora é <system>date "+%l:%M %P"</system>
+	    </template>
+	</category>
+
+
+
+
+
+    <category>
+        <pattern>PREVISÃO DO TEMPO</pattern>
+        <template>
+	    <system> bash -c "/etc/alice/programas/prevtempo &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TEMPO PARA HOJE</pattern>
+        <template>
+	    <system> bash -c "/etc/alice/programas/prevtempo &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+	<category>
+	    <pattern>DATA</pattern>
+	    <template>
+		A hora é <system>date "+%l:%M %P"</system>
+	    </template>
+	</category>
+
+
+    <category>
+        <pattern>DIA</pattern>
+        <template>
+	    <system> bash -c "/etc/alice/programas/hello &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PAUSAR MUSICA</pattern>
+        <template>
+             <random>
+               <li>Ok!</li>
+               <li>Musica parada!</li>
+            </random>
+	    <system> bash -c "qmmp --pause &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+
+</aiml>

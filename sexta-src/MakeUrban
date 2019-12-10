@@ -1,0 +1,18 @@
+#!/bin/bash
+
+IMAGEM='Urban.img'
+TAMANHO='4G'
+
+dd if=/dev/zero of=$IMAGEM bs=1 count=0 seek=$TAMANHO
+
+sudo install-mbr --force $IMAGEM
+#printf "o\nn\np\n\n\n\na\nw" | sudo fdisk $IMAGEM
+sudo kpartx -a $IMAGEM
+sudo mkfs.ext4 /dev/mapper/loop0p1
+
+
+sudo kpartx -d binary.img
+
+
+
+printf "y" | sudo mkfs.ext4 $IMAGEM1

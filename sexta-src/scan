@@ -1,0 +1,5 @@
+#!/bin/bash
+[ "$UID" -eq 0 ] || { echo "Execcute como root."; exit 1;}
+
+nmap -sV -sS -T4 -F -Pn localhost
+	

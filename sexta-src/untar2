@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ARQ=$1
+
+function tar2 {
+
+	tar -xzvf $ARQ
+
+}
+
+tar2
